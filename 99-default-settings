@@ -12,6 +12,7 @@ uci commit fstab
 
 rm -f /usr/lib/lua/luci/view/admin_status/index/mwan.htm
 rm -f /usr/lib/lua/luci/view/admin_status/index/upnp.htm
+rm -f /usr/lib/lua/luci/view/admin_status/index/linkease.htm
 
 ln -sf /sbin/ip /usr/bin/ip
 
