@@ -13,8 +13,6 @@
 
 # 移除要替换的包
 rm -rf feeds/packages/net/v2ray-geodata
-#rm -rf feeds/packages/net/mosdns
-#rm -rf feeds/luci/applications/luci-app-mosdns
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
@@ -27,6 +25,7 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
+git clone -b js --single-branch https://github.com/gngpp/luci-theme-design package/luci-theme-design
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 git_sparse_clone master https://github.com/kiddin9/openwrt-packages luci-app-aliddns
@@ -39,6 +38,9 @@ chmod -R a+x $GITHUB_WORKSPACE/preset-clash-core.sh
 $GITHUB_WORKSPACE/preset-clash-core.sh
 
 echo "
+# 主题
+CONFIG_PACKAGE_luci-theme-design=y
+
 # mosdns
 CONFIG_PACKAGE_luci-app-mosdns=y
 
