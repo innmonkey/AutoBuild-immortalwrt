@@ -51,7 +51,7 @@ CONFIG_PACKAGE_luci-app-pushbot=y
 CONFIG_PACKAGE_luci-app-aliddns=y
 
 # Jellyfin
-CONFIG_PACKAGE_luci-app-jellyfin=y
+#CONFIG_PACKAGE_luci-app-jellyfin=y
 
 # 易有云
 CONFIG_PACKAGE_luci-app-linkease=y
