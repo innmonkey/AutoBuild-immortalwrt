@@ -8,8 +8,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-  schedule:
-   - cron: 0 1 1/7 * *
+#  schedule:
+#   - cron: 0 1 1/7 * *
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
@@ -180,6 +180,9 @@ jobs:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
+
+    - name: TG推送
+      run: curl "https://api2.pushdeer.com/message/push?pushkey=${{ secrets.PUSHDEER_TOKEN }}&text=【Github Actions】AutoBuild-immortalwrt-x86 打包成功"
 
     - name: 删除运行记录
       uses: Mattraks/delete-workflow-runs@main
