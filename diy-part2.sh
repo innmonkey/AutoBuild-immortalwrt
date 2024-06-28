@@ -42,19 +42,19 @@ echo "
 CONFIG_PACKAGE_luci-theme-design=y
 
 # mosdns
-CONFIG_PACKAGE_luci-app-mosdns=y
+#CONFIG_PACKAGE_luci-app-mosdns=y
 
 # pushbot
-CONFIG_PACKAGE_luci-app-pushbot=y
+#CONFIG_PACKAGE_luci-app-pushbot=y
 
 # 阿里DDNS
-CONFIG_PACKAGE_luci-app-aliddns=y
+#CONFIG_PACKAGE_luci-app-aliddns=y
 
 # Jellyfin
 #CONFIG_PACKAGE_luci-app-jellyfin=y
 
 # 易有云
-CONFIG_PACKAGE_luci-app-linkease=y
+#CONFIG_PACKAGE_luci-app-linkease=y
 
 " >> .config
 
